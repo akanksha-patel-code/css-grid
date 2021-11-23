@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid</title>
+    <style>
+        body {
+            margin-top: 10px;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: 150px auto;
+            grid-template-rows: 100px 100px auto;
+            
+            grid-template-areas: 
+            "header header"
+            "nav main"
+            "footer footer";
+
+            grid-gap: 10px;
+            /* grid-column-gap: 10px; */
+
+        }
+
+        header{ 
+            background-color: red;
+            grid-area: header;
+        }
+
+        nav{ 
+            background-color: yellow;
+            grid-area: nav;
+        }
+
+        main{ 
+            background-color: rgb(255, 0, 157);
+            grid-area: main;
+        }
+
+        footer{ 
+            background-color: gray;
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+<body>
+   <section id="container">
+       <header>header area</header>
+       <nav>nav area</nav>
+       <main>main area</main>
+       <footer>footer area</footer>
+   </section>
+</body>
+</html>
